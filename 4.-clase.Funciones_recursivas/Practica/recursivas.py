@@ -7,10 +7,10 @@ def sumar_naturales(numero:int):
     
 
 def calcular_potencia(base:int, exponente:int):
-    if base == 1:
-        return 1
+    if exponente == 0:
+        exponente = 1
     else:
-        resultado = base ** calcular_potencia(base - 1)
+        resultado = base ** calcular_potencia(base, exponente - 1)
         return resultado
 
 

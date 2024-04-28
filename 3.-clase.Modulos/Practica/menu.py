@@ -3,18 +3,21 @@ from funciones import *
 
 def menu():
     while(True):
+        flag_validacion = True
         print("MENU CALCULADORA\n1.Ingresar Primer Operando\n2.Ingresar Segundo Operando\n3.Calcular Todas las operaciones\n4.Informar Resultados\n5.Salir")
         
-        opcion = int(input("Su opcion: "))
+        opcion = pedir_entero("Ingrese un numero: ", "Ingrese un numero entre 1 y 5: ", 1, 5)
 
         
         
         if opcion == 1:
-            A = primer_numero()
-            print("numero tomado")
+            A = pedir_entero("Ingrese un valor: ", "Ingrese un valor valido: ", -1000, 1000)
+            print("Numero tomado")
         elif opcion == 2:
-            B = segundo_numero()
-            print("numero tomado")
+            B = pedir_entero("Ingrese un valor: ", "Ingrese un valor valido: ", -1000, 1000)
+            print("Numero tomado")
+
+      
         elif opcion == 3:
             if (A == None or B == None):
                 print("debe ingresar los numeros")

@@ -8,6 +8,17 @@ def segundo_numero ():
     numero_2 = int(input("ingrese el segundo numero a operar: "))
     return numero_2
 
+def pedir_entero(mensaje, mensaje_error, minimo, maximo):
+    """
+    Validacion de la opcion ingresada
+    """
+    entero_ingresado = int(input(mensaje))
+    while entero_ingresado < minimo or entero_ingresado > maximo:
+        entero_ingresado = int(input(mensaje_error))
+    return entero_ingresado
+
+
+
 def calcular_suma(A,B):
     ''''''
     suma = A + B
