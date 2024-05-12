@@ -1,3 +1,5 @@
+#Alumno: Camila Daraio. 
+#Entregado
 def sumar_naturales(numero:int):
     if numero == 1:
         return 1

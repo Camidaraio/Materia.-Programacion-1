@@ -1,3 +1,6 @@
+#Alumno: Camila Daraio. 
+#Falta entregar
+
 def pedir_entero(mensaje, mensaje_error, minimo, maximo):
     """
     Validacion de la opcion ingresada

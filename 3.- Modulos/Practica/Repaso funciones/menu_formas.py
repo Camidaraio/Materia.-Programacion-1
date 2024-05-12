@@ -1,3 +1,8 @@
+
+#Alumno: Camila Daraio. 
+#Falta entregar
+
+
 from funciones import *
 
 while(True):
