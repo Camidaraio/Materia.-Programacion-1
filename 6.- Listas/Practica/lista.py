@@ -25,19 +25,26 @@ promedio = suma / contador
 promedio de los números positivos
 """
 
-suma = 0
-promedio = 0 
+
+
+def calcular_promedio(lista):
+    """ 
+    Calcula el promedio de todos los numeros en una lista
+    """
+    suma = 0
+    promedio = 0 
+    contador = 0
+    for i in (lista):
+        if i > 0:  
+            suma += i
+            contador += 1
+
+
+    promedio = suma / contador
+    print(promedio) 
 
 lista_enteros = [5, 5, 0, -6]
-
-for i in (lista_enteros):
-    if i > 0:  
-        suma += i
-        contador += 1
-
-
-promedio = suma / contador
-print(promedio)
+calcular_promedio(lista_enteros)
 
 
 """
