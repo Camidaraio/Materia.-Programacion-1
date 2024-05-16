@@ -8,28 +8,34 @@
 1.Escribir una función que reciba una lista de enteros, la misma calculará y devolverá el
 promedio de todos los números
 """
+lista_enteros = [5, 5, 0, -6]
 
-suma = 0
+def calcular_promedio(lista):
+    """"""
+    suma = 0
 
-lista_enteros = [5,5]
 
-for i in range(len(lista_enteros)):
-    suma += i
-contador = len(lista_enteros) 
-promedio = suma / contador
+
+    for i in range(len(lista)):
+        suma += i
+    contador = len(lista) 
+    promedio = suma / contador
+    return promedio
+
 
 
 
 """
 2. Escribir una función parecida a la anterior, pero la misma deberá calcular y devolver el
 promedio de los números positivos
+
 """
 
 
 
-def calcular_promedio(lista):
+def calcular_promedio_positivos(lista):
     """ 
-    Calcula el promedio de todos los numeros en una lista
+    Calcula el promedio unicamente de numeros positivos de una lista
     """
     suma = 0
     promedio = 0 
@@ -41,10 +47,10 @@ def calcular_promedio(lista):
 
 
     promedio = suma / contador
-    print(promedio) 
+    return promedio
 
-lista_enteros = [5, 5, 0, -6]
-calcular_promedio(lista_enteros)
+
+#print(calcular_promedio_positivos(lista_enteros))
 
 
 """
@@ -52,9 +58,27 @@ calcular_promedio(lista_enteros)
 que recibe como parámetro.
 """
 
+def listasss(lista):
+    """"""
+    for i in range(len(lista)):
+        print(lista[i])
+    
+#listasss(lista_enteros)
+
 
 """
 4. Escribir una función que reciba como parámetros una lista de enteros y retorne la posición
 del valor máximo encontrado.
 """
 
+def maximo(lista):
+    """ 
+    Encuentra el maximo dentro de una lista de enteros
+    """
+    maximo = None
+    for i in range(len(lista)):
+        if maximo == None or lista[i] > maximo:
+            maximo = lista[i]
+    return maximo
+
+print(maximo(lista_enteros))
