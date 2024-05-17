@@ -12,14 +12,11 @@ lista_enteros = [5, 5, 0, -6]
 
 def calcular_promedio(lista):
     """"""
-    suma = 0
-
-
-
+    acumulador = 0
     for i in range(len(lista)):
-        suma += i
-    contador = len(lista) 
-    promedio = suma / contador
+        acumulador += lista[i]
+   
+    promedio = acumulador / len(lista) 
     return promedio
 
 
@@ -37,20 +34,15 @@ def calcular_promedio_positivos(lista):
     """ 
     Calcula el promedio unicamente de numeros positivos de una lista
     """
-    suma = 0
-    promedio = 0 
-    contador = 0
+
     for i in (lista):
         if i > 0:  
-            suma += i
-            contador += 1
-
-
-    promedio = suma / contador
+          promedio = calcular_promedio(lista)  
+ 
     return promedio
 
 
-#print(calcular_promedio_positivos(lista_enteros))
+print(calcular_promedio_positivos(lista_enteros))
 
 
 """
@@ -58,10 +50,12 @@ def calcular_promedio_positivos(lista):
 que recibe como parámetro.
 """
 
-def listasss(lista):
+def calcular_producto(lista):
     """"""
+    acumulador = 1
+
     for i in range(len(lista)):
-        print(lista[i])
+        acumulador *= lista[i]
     
 #listasss(lista_enteros)
 
@@ -79,6 +73,7 @@ def maximo(lista):
     for i in range(len(lista)):
         if maximo == None or lista[i] > maximo:
             maximo = lista[i]
+
     return maximo
 
-print(maximo(lista_enteros))
+#print(maximo(lista_enteros))
