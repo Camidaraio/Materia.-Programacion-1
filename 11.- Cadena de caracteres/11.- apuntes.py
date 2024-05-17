@@ -1,0 +1,5 @@
+"""
+Cadena de caracteres: str
+
+"""
+
