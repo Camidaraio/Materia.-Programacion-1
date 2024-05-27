@@ -67,5 +67,5 @@ def obtener_nombre(lista_heroes):
     """
     
     """
-
+    
     
