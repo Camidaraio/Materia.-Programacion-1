@@ -48,3 +48,24 @@ def normalizar_datos(lista):
         print("Se realizaron cambios en los datos \n")
 
     return cambios_realizados
+
+
+def obtener_dato(lista_heroes, clave):
+    """
+    Obtiene el valor de una clave de un heroe
+
+    Parametros:
+    - diccionario: lista_heroes
+    - clave: la clave del héroe
+
+    Devuelve:
+    - El valor de la clave
+    """ 
+
+
+def obtener_nombre(lista_heroes):
+    """
+    
+    """
+
+    
