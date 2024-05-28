@@ -1,5 +1,5 @@
 #Alumno: Camila Daraio
-
+# No lo hice yo, rehacer la actividad con lo entendido
 
 # 1.Crear una función que reciba como parámetro una cadena y determine
 # cuántas lista[x]s contiene. La función deberá retornar un entero indicando el
