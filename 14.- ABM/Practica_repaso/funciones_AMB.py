@@ -33,9 +33,22 @@ def listar_alumnos(lista_alumnos):
         print(mensaje)
 
 
-def modificar_alumnos():
+def modificar_alumnos(legajo: int, lista_alumnos: list, clave: str, valor : any):
     """"""
-    
+    alumno_encontrado = False
+    for i in range(len(lista_alumnos)):
+        if lista_alumnos[i]["Legajo"] == legajo:
+            lista_alumnos[i][clave] = valor
+            alumno_encontrado = True
+            break
+    return alumno_encontrado
+
+def mostrar_claves(diccionario: dict):
+    claves = diccionario.keys()
+    for clave in claves:
+        print(clave)
+
+
 
     
 def agregar_alumno(nombre, apellido, legajo, Nota_final, estado, lista_alumnos):

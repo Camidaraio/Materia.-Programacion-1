@@ -24,7 +24,15 @@ while True:
             agregar_alumno(nombre_ingresado, apellido_ingresado, legajo_ingresado, nota_ingresada, estado_ingresado, lista_alumnos)
             print("Alumno agregado")
         case 3:
-            pass
+            legajo_ingresado = pedir_entero("Ingrese el legajo del alumno a modificar", "ERROR, el legajo ingresado no existe")
+
+            print("--------------")
+            mostrar_claves(lista_alumnos[0])
+            print("--------------")
+
+            
+
+
         case 4: 
             pass
         case 5:

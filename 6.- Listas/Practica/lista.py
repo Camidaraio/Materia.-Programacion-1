@@ -8,7 +8,7 @@
 1.Escribir una función que reciba una lista de enteros, la misma calculará y devolverá el
 promedio de todos los números
 """
-lista_enteros = [5, 5, 0, -6]
+lista_enteros = [300, 5, 2, 0, -6, 10]
 
 def calcular_promedio(lista):
     """"""
@@ -42,7 +42,7 @@ def calcular_promedio_positivos(lista):
     return promedio
 
 
-print(calcular_promedio_positivos(lista_enteros))
+#print(calcular_promedio_positivos(lista_enteros))
 
 
 """
@@ -77,3 +77,34 @@ def maximo(lista):
     return maximo
 
 #print(maximo(lista_enteros))
+
+"""
+5. Escribir una función que reciba como parámetros una lista de enteros y muestre la/las
+posiciones en donde se encuentra el valor máximo hallado."""
+
+def posicion_maximo(lista):
+    """"""
+    """ 
+    Encuentra el maximo dentro de una lista de enteros
+    """
+    maximo = None
+    for i in range(len(lista)):
+        if maximo == None or lista[i] > maximo:
+            maximo = lista[i]
+            
+
+    return maximo
+
+print(posicion_maximo(lista_enteros))
+
+
+
+""""
+6. Escribe una función llamada reemplazar_nombres que reciba como parámetros una lista
+de nombres, un nombre a reemplazar y su correspondiente reemplazo. La función debe
+reemplazar cada ocurrencia del nombre a reemplazar en la lista con su correspondiente
+reemplazo y luego retornar la cantidad total de reemplazos realizados.
+"""
+
+def reemplazar_nombres(lista_nombres, nombre_a_reemplazar, nuevo_nombre):
+    """"""
