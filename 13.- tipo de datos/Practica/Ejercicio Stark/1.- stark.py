@@ -96,10 +96,11 @@ def obtener_nombre_y_dato(heroe,clave):
 def obtener_maximo(lista, clave):
     retorno = False
     if len(lista) > 0:
-        for i in range(len(lista)):
-            if i == 0 or maximo < lista[i][clave]:
-                maximo = lista[i][clave]
-            retorno = maximo
+        if type(lista[0][clave] == int or lista[0][clave] == float):
+            for i in range(len(lista)):
+                if i == 0 or maximo < lista[i][clave]:
+                    maximo = lista[i][clave]
+                retorno = maximo
     return retorno
 
 # normalizar_datos(lista_personajes)
@@ -109,19 +110,65 @@ def obtener_maximo(lista, clave):
 def obtener_minimo(lista, clave):
     retorno = False
     if len(lista) > 0:
-        for i in range(len(lista)):
-            if type(lista[0][clave] == int or lista[0][clave] == float):
-                if i == 0 or minimo > lista[i][clave]:
-                    minimo = lista[i][clave]
-                retorno = minimo
+        if type(lista[0][clave] == int or lista[0][clave] == float):
+            for i in range(len(lista)):
+                    if i == 0 or minimo > lista[i][clave]:
+                        minimo = lista[i][clave]
+                    retorno = minimo
     return retorno
 
 # normalizar_datos(lista_personajes)
 # print(obtener_minimo(lista_personajes, "fuerza"))
 
-def obtener_dato_cantidad(lista_heroes, numero ,clave):
-    """"""
+def obtener_dato_cantidad(lista_heroe,numero,key):
+    lista = []
+    for i in range(len(lista_heroe)):
+        if lista_heroe[i][key] == numero:
+            lista.append(lista_heroe[i])
+    return lista
 
-def stark_imprimir_heroes():
-    """"""
+#print(obtener_dato_cantidad(lista_personajes,55,"fuerza"))
+
+
+def stark_imprimir_heroes(lista_heroes):
+    retorno = False
+    mensaje = ""
+    if len(lista_heroes) > 0:
+        for i in range(len(lista_heroes)):
+            for key,value in lista_heroes[i].items():
+                mensaje += f"|| {key} : {value}\n"
+        print(mensaje)
+    else:
+        return retorno
+
+#stark_imprimir_heroes(lista_personajes)
     
+def sumar_dato_heroe(lista_heroes,key):
+    acumulador = 0
+    if len(lista_heroes) > 0:
+        if type(lista_heroes[0][key]) == int or type(lista_heroes[0][key]) == float:
+            for i in range(len(lista_heroes)):
+                if len(lista_heroes[i].keys()) > 0:
+                    acumulador += lista_heroes[i][key]
+    return acumulador
+        
+#print(sumar_dato_heroe(lista_personajes,"fuerza"))
+
+def dividir(dividendo, divisor):
+    if divisor == 0:
+        retorno = False
+    else:
+        retorno = dividendo/divisor
+    return retorno
+
+#print(dividir(10,0))
+
+def calcular_promedio(lista_heroes,key):
+    if type(lista_heroes[0][key]) == int or type(lista_heroes[0][key]) == float:
+        dividendo = sumar_dato_heroe(lista_heroes,key)
+        divisor = len(lista_heroes)
+        promedio = dividir(dividendo,divisor)
+        return promedio
+    
+print(calcular_promedio(lista_personajes,"fuerza"))
+        
