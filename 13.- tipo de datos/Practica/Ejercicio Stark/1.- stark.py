@@ -172,3 +172,19 @@ def calcular_promedio(lista_heroes,key):
     
 print(calcular_promedio(lista_personajes,"fuerza"))
         
+
+def mostrar_promedio_dato():
+    pass
+
+def imprimir_menu():
+    pass
+
+def validar_entero():
+    pass
+
+def stark_menu_principal():
+    pass
+
+def stark_marvel_app():
+    pass
+
