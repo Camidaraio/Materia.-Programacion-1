@@ -49,6 +49,7 @@ def normalizar_datos(lista):
 
     return cambios_realizados
 
+#normalizar_datos(lista_personajes)
 
 def obtener_dato(heroe, clave):
     """
@@ -161,7 +162,7 @@ def dividir(dividendo, divisor):
         retorno = dividendo/divisor
     return retorno
 
-#print(dividir(10,0))
+#print(dividir(10,1000))
 
 def calcular_promedio(lista_heroes,key):
     if type(lista_heroes[0][key]) == int or type(lista_heroes[0][key]) == float:
@@ -169,12 +170,19 @@ def calcular_promedio(lista_heroes,key):
         divisor = len(lista_heroes)
         promedio = dividir(dividendo,divisor)
         return promedio
-    
-#print(calcular_promedio(lista_personajes,"fuerza"))
+# normalizar_datos(lista_personajes)   
+# print(calcular_promedio(lista_personajes,"fuerza"))
         
 
 def mostrar_promedio_dato(lista_heroes,key):
-    pass
+    if not lista_heroes:
+        return False
+    
+    promedio = calcular_promedio(lista_heroes, key)
+    return promedio
+
+# normalizar_datos(lista_personajes)
+# print(mostrar_promedio_dato(lista_personajes,"altura"))
 
 def imprimir_menu():
     pass
