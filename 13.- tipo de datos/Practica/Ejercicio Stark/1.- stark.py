@@ -177,15 +177,15 @@ def calcular_promedio(lista_heroes,key):
 def mostrar_promedio_dato(lista_heroes,key):
     if not lista_heroes:
         return False
-    
-    promedio = calcular_promedio(lista_heroes, key)
-    return promedio
+    if type(lista_heroes[0][key]) == int or type(lista_heroes[0][key]) == float:
+        promedio = calcular_promedio(lista_heroes, key)
+        return promedio
 
 # normalizar_datos(lista_personajes)
 # print(mostrar_promedio_dato(lista_personajes,"altura"))
 
 def imprimir_menu():
-    pass
+    print(stark_menu_principal)
 
 def validar_entero():
     pass
