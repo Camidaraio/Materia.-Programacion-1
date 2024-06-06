@@ -82,7 +82,7 @@ def obtener_nombre(heroe):
     return retorno
 
 
-#print(obtener_nombre(lista_personajes))
+#print(obtener_nombre(lista_personajes[0]))
 
 def obtener_nombre_y_dato(heroe,clave):
     """"""
@@ -93,6 +93,10 @@ def obtener_nombre_y_dato(heroe,clave):
     else:
         retorno = False
     return retorno
+
+#nombres = obtener_nombre_y_dato(lista_personajes[0], "altura")
+
+
 
 def obtener_maximo(lista, clave):
     retorno = False
@@ -259,7 +263,7 @@ def stark_marvel_app():
             if opcion == 2:
                 print(obtener_dato(lista_personajes[0], "nombre"))
             elif opcion == 3:
-                print(obtener_nombre(lista_personajes))
+                print(obtener_nombre(lista_personajes[0]))
             elif opcion ==  4:
                 print(obtener_nombre_y_dato(lista_personajes[1], "altura"))
             elif opcion ==  5:
@@ -286,4 +290,6 @@ def stark_marvel_app():
         else:
             print("Primero debes seleccionar la opción 1.")
                     
-stark_marvel_app()
+#stark_marvel_app()
+
+
