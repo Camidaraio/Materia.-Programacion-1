@@ -221,26 +221,37 @@ def validar_entero(valor : str):
     
 # print(validar_entero("4"))
 
-def pedir_entero(mensaje, mensaje_error, minimo, maximo):
-    """
-    Validacion de la opcion ingresada
-    """
-    entero_ingresado = int(input(mensaje))
-    while entero_ingresado < minimo or entero_ingresado > maximo:
-        entero_ingresado = int(input(mensaje_error))
-    return entero_ingresado
-
 
 def stark_menu_principal():
     """"""
     imprimir_menu()
     while True:
-        opcion = input("Debe ingresar un numero del 1 al 10: ")
-        
+        opcion = input("Debe ingresar un numero del 1 al 12: ")
+        if validar_entero(opcion):
+            opcion = int(opcion)
+            if opcion < 1 or opcion > 12:
+                print("opcion incorrecta")
+            else:
+                return opcion
+        else:
+            print("ingrese un numero valido")
+
+#stark_menu_principal()
 
 
 
 def stark_marvel_app():
-    pass
+    """
+    Funcion principal de la aplicación Stark Marvel
 
-stark_menu_principal()
+    Parametros:
+    - lista_heroes: Una lista de diccionarios que representan cada heroe.
+    """
+
+    while True:
+        opcion = stark_menu_principal()
+
+        match(opcion):
+            case 1:
+                pass
+
