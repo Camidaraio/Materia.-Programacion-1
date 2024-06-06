@@ -190,17 +190,19 @@ def imprimir_menu():
     """
     print("Eliga una opcion: \n",
         "1- Normalizar datos \n ",
-        "2- Imprimir nombres de NB: \n ",
-        "3- superhéroe mas alto del genero F: \n ",
-        "4- superhéroe mas alto del genero M: \n ",
-        "5- superhéroe mas debil del genero M: \n ",
-        "6- superhéroe mas debil del genero NB: \n ",
-        "7- fuerza promedio de los superhéroes de género NB: \n ",
-        "8- cuántos superhéroes tienen cada tipo de color de ojos: \n,",
-        "9- cuántos superhéroes tienen cada tipo de color de pelo: \n",
-        "10- todos los superhéroes agrupados por color de ojos: \n",
-        "11- todos los superhéroes agrupados por tipo de inteligencia: \n",
-        "12- Salir: \n ",
+        "2- Imprimir dato de fuerza: \n ",
+        "3- Imprimir nombres de todos los heroes: \n ",
+        "4- obtener nombre y dato: \n ",
+        "5- obtener_maximo: \n ",
+        "6- obtener_minimo: \n ",
+        "7- obtener_dato_cantidad: \n ",
+        "8- stark_imprimir_heroes: \n,",
+        "9- sumar_dato_heroe: \n",
+        "10- dividir: \n",
+        "11- calcular_promedio: \n",
+        "12- mostrar_promedio_dato: \n",
+        "13- validar_entero: \n",
+        "14- Salir: \n ",
         )
 
 def validar_entero(valor : str):
@@ -226,10 +228,10 @@ def stark_menu_principal():
     """"""
     imprimir_menu()
     while True:
-        opcion = input("Debe ingresar un numero del 1 al 12: ")
+        opcion = input("Debe ingresar un numero del 1 al 14: ")
         if validar_entero(opcion):
             opcion = int(opcion)
-            if opcion < 1 or opcion > 12:
+            if opcion < 1 or opcion > 14:
                 print("opcion incorrecta")
             else:
                 return opcion
@@ -253,5 +255,34 @@ def stark_marvel_app():
 
         match(opcion):
             case 1:
-                pass
+                normalizar_datos(lista_personajes)
+            case 2:
+                print(obtener_dato(lista_personajes[0], "nombre"))
+            case 3:
+                print(obtener_nombre(lista_personajes))
+            case 4:
+                print(obtener_nombre_y_dato(lista_personajes[1], "altura"))
+            case 5:
+                print(obtener_maximo(lista_personajes, "fuerza"))
+            case 6:
+                print(obtener_minimo(lista_personajes, "fuerza"))
+            case 7:
+                print(obtener_dato_cantidad(lista_personajes,55,"fuerza"))
+            case 8:
+                stark_imprimir_heroes(lista_personajes)
+            case 9:
+                print(sumar_dato_heroe(lista_personajes,"fuerza"))
+            case 10:
+                print(dividir(10,1000))
+            case 11:
+                print(calcular_promedio(lista_personajes,"fuerza"))
+            case 12:
+                print(mostrar_promedio_dato(lista_personajes,"altura"))
+            case 13:
+                print(validar_entero("4"))
+            case _:
+                print("Saliendo...")
+                break
 
+
+stark_marvel_app()
