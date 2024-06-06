@@ -263,7 +263,7 @@ def stark_marvel_app():
             case 4:
                 print(obtener_nombre_y_dato(lista_personajes[1], "altura"))
             case 5:
-                print(obtener_maximo(lista_personajes, "fuerza"))
+                print(obtener_maximo(lista_personajes, "altura"))
             case 6:
                 print(obtener_minimo(lista_personajes, "fuerza"))
             case 7:
