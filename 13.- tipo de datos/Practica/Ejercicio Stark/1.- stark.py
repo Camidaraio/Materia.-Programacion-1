@@ -185,15 +185,62 @@ def mostrar_promedio_dato(lista_heroes,key):
 # print(mostrar_promedio_dato(lista_personajes,"altura"))
 
 def imprimir_menu():
-    print(stark_menu_principal)
+    """
+    Imprime un menu
+    """
+    print("Eliga una opcion: \n",
+        "1- Normalizar datos \n ",
+        "2- Imprimir nombres de NB: \n ",
+        "3- superhéroe mas alto del genero F: \n ",
+        "4- superhéroe mas alto del genero M: \n ",
+        "5- superhéroe mas debil del genero M: \n ",
+        "6- superhéroe mas debil del genero NB: \n ",
+        "7- fuerza promedio de los superhéroes de género NB: \n ",
+        "8- cuántos superhéroes tienen cada tipo de color de ojos: \n,",
+        "9- cuántos superhéroes tienen cada tipo de color de pelo: \n",
+        "10- todos los superhéroes agrupados por color de ojos: \n",
+        "11- todos los superhéroes agrupados por tipo de inteligencia: \n",
+        "12- Salir: \n ",
+        )
 
-def validar_entero():
-    pass
+def validar_entero(valor : str):
+    """
+    Verifica si un string de numero está conformado unicamente por digitos
+
+    Parametros:
+    - valor: El string que se va a verificar
+
+    Retorna:
+    - True si el string está conformado unicamente por digitos, False en caso contrario
+
+    """
+    if valor.isdigit():
+        return True
+    else:
+        return False
+    
+# print(validar_entero("4"))
+
+def pedir_entero(mensaje, mensaje_error, minimo, maximo):
+    """
+    Validacion de la opcion ingresada
+    """
+    entero_ingresado = int(input(mensaje))
+    while entero_ingresado < minimo or entero_ingresado > maximo:
+        entero_ingresado = int(input(mensaje_error))
+    return entero_ingresado
+
 
 def stark_menu_principal():
-    pass
+    """"""
+    imprimir_menu()
+    while True:
+        opcion = input("Debe ingresar un numero del 1 al 10: ")
+        
+
+
 
 def stark_marvel_app():
     pass
 
-
+stark_menu_principal()
