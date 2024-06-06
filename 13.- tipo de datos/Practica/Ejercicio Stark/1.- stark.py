@@ -249,40 +249,41 @@ def stark_marvel_app():
     Parametros:
     - lista_heroes: Una lista de diccionarios que representan cada heroe.
     """
+    acceso_permitido = False
 
     while True:
         opcion = stark_menu_principal()
-
-        match(opcion):
-            case 1:
-                normalizar_datos(lista_personajes)
-            case 2:
+        if opcion == 1:
+            acceso_permitido = normalizar_datos(lista_personajes)
+        if acceso_permitido:
+            if opcion == 2:
                 print(obtener_dato(lista_personajes[0], "nombre"))
-            case 3:
+            elif opcion == 3:
                 print(obtener_nombre(lista_personajes))
-            case 4:
+            elif opcion ==  4:
                 print(obtener_nombre_y_dato(lista_personajes[1], "altura"))
-            case 5:
-                print(obtener_maximo(lista_personajes, "altura"))
-            case 6:
+            elif opcion ==  5:
+                print(obtener_maximo(lista_personajes, "fuerza"))
+            elif opcion ==  6:
                 print(obtener_minimo(lista_personajes, "fuerza"))
-            case 7:
+            elif opcion ==  7:
                 print(obtener_dato_cantidad(lista_personajes,55,"fuerza"))
-            case 8:
+            elif opcion ==  8:
                 stark_imprimir_heroes(lista_personajes)
-            case 9:
+            elif opcion ==  9:
                 print(sumar_dato_heroe(lista_personajes,"fuerza"))
-            case 10:
+            elif opcion == 10:
                 print(dividir(10,1000))
-            case 11:
+            elif opcion == 11:
                 print(calcular_promedio(lista_personajes,"fuerza"))
-            case 12:
+            elif opcion ==  12:
                 print(mostrar_promedio_dato(lista_personajes,"altura"))
-            case 13:
+            elif opcion == 13:
                 print(validar_entero("4"))
-            case _:
+            elif opcion == 13:
                 print("Saliendo...")
                 break
-
-
+        else:
+            print("Primero debes seleccionar la opción 1.")
+                    
 stark_marvel_app()
