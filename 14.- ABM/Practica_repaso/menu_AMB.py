@@ -30,9 +30,6 @@ while True:
             mostrar_claves(lista_alumnos[0])
             print("--------------")
 
-            
-
-
         case 4: 
             pass
         case 5:
