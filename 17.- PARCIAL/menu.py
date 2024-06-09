@@ -20,7 +20,16 @@ while True:
 
     match opcion:
         case 1:
-            pass
+            #ID A DEFINIR
+            nombre_del_proyecto = pedir_str("ingrese el nombre: ", "nombre invalido")
+            descripcion = pedir_str("ingrese el apellido: ", "apellido invalido")
+            inicio_del_proyecto = solicitar_fechas()
+            finalizacion_del_proyecto = solicitar_fechas()
+            presupuesto = pedir_str("Ingrese su estado actual ACTIVO||INACTIVO: ", "Ingrese un dato valido")
+            Estado = pedir_str("Ingrese su estado actual ACTIVO||INACTIVO: ", "Ingrese un dato valido")
+
+            agregar_alumno(nombre_del_proyecto, descripcion, inicio_del_proyecto, finalizacion_del_proyecto, presupuesto, Estado)
+            print("Alumno agregado")
         case 2:
             pass
         case 3:
