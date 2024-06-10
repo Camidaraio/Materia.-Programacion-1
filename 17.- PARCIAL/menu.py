@@ -26,7 +26,7 @@ while True:
             inicio_del_proyecto = solicitar_fechas()
             finalizacion_del_proyecto = solicitar_fechas()
             presupuesto = pedir_str("Ingrese su estado actual ACTIVO||INACTIVO: ", "Ingrese un dato valido")
-            Estado = pedir_str("Ingrese su estado actual ACTIVO||INACTIVO: ", "Ingrese un dato valido")
+            Estado = pedir_str("Ingrese su estado actual ACTIVO||FINALIZADO||CANCELADO: ", "Ingrese un dato valido")
 
             agregar_alumno(nombre_del_proyecto, descripcion, inicio_del_proyecto, finalizacion_del_proyecto, presupuesto, Estado)
             print("Alumno agregado")

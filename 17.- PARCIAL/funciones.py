@@ -49,8 +49,9 @@ def solicitar_fechas():
     return fecha_inicio, fecha_fin
 
 fecha_inicio, fecha_fin = solicitar_fechas()
-print("Fecha de inicio:", fecha_inicio.strftime("%d/%m/%Y"))
-print("Fecha de fin:", fecha_fin.strftime("%d/%m/%Y"))
+#como debo mostrar las fechas
+# print("Fecha de inicio:", fecha_inicio.strftime("%d/%m/%Y"))
+# print("Fecha de fin:", fecha_fin.strftime("%d/%m/%Y"))
 
 def agregar_alumno(nombre, apellido, legajo, Nota_final, estado, lista_alumnos):
     """"""
