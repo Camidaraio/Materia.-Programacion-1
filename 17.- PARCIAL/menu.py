@@ -13,7 +13,7 @@ for empleado in lista_empleados:
 archivo.close()
 
 while True:
-    print("""1.- Ingresar proyecto: \n2.- Modificar proyecto: \n3.- Cancelar proyecto \n4.- Comprobar proyectos: \n5.- Mostrar todos \n6.- Calcular presupuesto promedio \n7.- Buscar proyecto por nombre \n8.- Ordenar proyectos \n9.- Retomar proyecto: \n10.- Salir""")
+    print("""1.- Ingresar proyecto \n2.- Modificar proyecto \n3.- Cancelar proyecto \n4.- Comprobar proyectos: \n5.- Mostrar todos \n6.- Calcular presupuesto promedio \n7.- Buscar proyecto por nombre \n8.- Ordenar proyectos \n9.- Retomar proyecto: \n10.- Salir""")
     
 
     opcion = pedir_entero("Ingrese un valor: ", "ERROR, ingrese una opcion correcta", 1, 10)
