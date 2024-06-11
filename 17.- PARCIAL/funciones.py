@@ -48,7 +48,7 @@ def solicitar_fechas():
             break
     return fecha_inicio, fecha_fin
 
-fecha_inicio, fecha_fin = solicitar_fechas()
+#fecha_inicio, fecha_fin = solicitar_fechas()
 #como debo mostrar las fechas
 # print("Fecha de inicio:", fecha_inicio.strftime("%d/%m/%Y"))
 # print("Fecha de fin:", fecha_fin.strftime("%d/%m/%Y"))
