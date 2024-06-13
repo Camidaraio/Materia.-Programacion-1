@@ -25,11 +25,12 @@ def pedir_str(mensaje : str, error: str):
             print(error)
             
 
-def listar_alumnos(lista_alumnos):
-    for alumno in lista_alumnos:
+def listar_alumnos(lista_alumnos: list):
+    for i in range(len(lista_alumnos)):
         mensaje = ''
-        for clave, valor in alumno.items():
-            mensaje += f"|| {clave} || {valor} "
+        if lista_alumnos[i]["Estado"] == "ACTIVO":
+            for clave, valor in lista_alumnos[i].items():
+                mensaje += f"|| {clave} || {valor} "
         print(mensaje)
 
 
@@ -43,11 +44,16 @@ def modificar_alumnos(legajo: int, lista_alumnos: list, clave: str, valor : any)
             break
     return alumno_encontrado
 
+def dar_baja_alumno(legajo: int, lista_alumnos: list):
+    modificar_alumnos(legajo, lista_alumnos,"Estado", "INACTIVO" )
+
 def mostrar_claves(diccionario: dict):
     claves = diccionario.keys()
     for clave in claves:
         print(clave)
 
+def verificar_tipo(lista_alumnos, keys):
+    pass
 
 
     

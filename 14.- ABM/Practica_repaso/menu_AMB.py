@@ -1,7 +1,7 @@
 from funciones_AMB import *
 
 lista_alumnos =[{"Nombre": "Pepito", "Apellido":"Perez", "Legajo":10, "Nota_final":5, "Estado": "ACTIVO"},
-                {"Nombre":"Juan", "Apellido":"Perez", "Legajo":20, "Nota_final":4, "Estado": "ACTIVO"}]
+                {"Nombre":"Juan", "Apellido":"Perez", "Legajo":20, "Nota_final":4, "Estado": "INACTIVO"}]
 
 #ALTA BAJA Y MODIFICACION
 
@@ -29,9 +29,28 @@ while True:
             print("--------------")
             mostrar_claves(lista_alumnos[0])
             print("--------------")
+            
+            clave_ingresada = pedir_str("ingrese la clave a modificas", "clave en valida")
+
+            if verificar_tipo(lista_alumnos[0], clave_ingresada):
+                valor_ingresado = pedir_str("ingrese el valor a sobreescribir", "valor invalido")
+            else:
+                valor_ingresado = pedir_str("ingrese el valor a sobreescribir", "valor invalido")
+
+            alumno_modificado = modificar_alumnos(legajo_ingresado, lista_alumnos, clave_ingresada, valor_ingresado)
+
+            if alumno_modificado == True:
+                print("Alumno modificado")
+            else:
+                print("No se encontro el legajo del alumno")
+
+
 
         case 4: 
-            pass
+            legajo_ingresado = pedir_entero("Ingrese el legajo del alumno a modificar: ", "ERROR, el legajo ingresado no existe", 1, 100)
+
+            dar_baja_alumno(legajo_ingresado, lista_alumnos)
+
         case 5:
             print("Saliendo...")
             break
