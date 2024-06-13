@@ -52,8 +52,13 @@ def mostrar_claves(diccionario: dict):
     for clave in claves:
         print(clave)
 
-def verificar_tipo(lista_alumnos, keys):
-    pass
+def verificar_tipo(lista_alumnos, keys: str):
+    retorno = False
+
+    if type(lista_alumnos[keys]) == type(""):
+        retorno = True
+
+    return retorno
 
 
     
