@@ -24,13 +24,13 @@ while True:
             agregar_alumno(nombre_ingresado, apellido_ingresado, legajo_ingresado, nota_ingresada, estado_ingresado, lista_alumnos)
             print("Alumno agregado")
         case 3:
-            legajo_ingresado = pedir_entero("Ingrese el legajo del alumno a modificar", "ERROR, el legajo ingresado no existe", 1, 100)
+            legajo_ingresado = pedir_entero("Ingrese el legajo del alumno a modificar: ", "ERROR, el legajo ingresado no existe", 1, 100)
 
             print("--------------")
             mostrar_claves(lista_alumnos[0])
             print("--------------")
             
-            clave_ingresada = pedir_str("ingrese la clave a modificas", "clave en valida")
+            clave_ingresada = pedir_str("ingrese la clave a modificar: ", "clave en valida")
 
             if verificar_tipo(lista_alumnos[0], clave_ingresada):
                 valor_ingresado = pedir_str("ingrese el valor a sobreescribir", "valor invalido")

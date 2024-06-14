@@ -57,6 +57,8 @@ def verificar_tipo(lista_alumnos, keys: str):
 
     if type(lista_alumnos[keys]) == type(""):
         retorno = True
+    else:
+        print("No existe esa clave")
 
     return retorno
 
